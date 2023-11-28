@@ -34,6 +34,9 @@
       <app-cursos-detail [cursoDetail]="selectedCurso"></app-cursos-detail>
     </div>
     
-    <p>Cursos con certificado:</p>
+    <p *ngIf="cursosConCertificado.length > 0">
+      {{ 'Los cursos ' + cursosConCertificado.join(', ') + ' ofrecen certificado' }}
+    </p>
+    
 </div>
 </div>
