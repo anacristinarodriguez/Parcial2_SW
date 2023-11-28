@@ -4,6 +4,6 @@
   <div class="card-body">
       <h1 class="card-title" style="font-size: larger;">{{cursoDetail.title}}</h1>
       <p>{{cursoDetail.description}}</p>
-      <p>{{cursoDetail.offers_certificate}}</p>
+      <p *ngIf="cursoDetail.offers_certificate" style="color: green; font-size: 25px;">Si ofrece certificado</p>
   </div>
 </div>
