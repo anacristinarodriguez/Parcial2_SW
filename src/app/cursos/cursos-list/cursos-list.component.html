@@ -1,28 +1,37 @@
-<header style="background-color: rgb(140, 172, 140)">
-  <h2>Cursos en linea</h2>
+<header style="background-color: #74a08c; padding: 15px 0; display: flex; align-items: center;">
+  <nav>
+      <div class="container-fluid">
+          <img src="https://icones.pro/wp-content/uploads/2022/03/icone-pc-ordinateur-noir.png" width="40px" alt="logo" class="logo" style="vertical-align: middle;">
+      </div>
+  </nav>
+  <h1>Cursos en linea</h1>
 </header>
 
-<table> 
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nombre</th>
-      <th>Plataforma</th>
-      <th>Lanzamiento</th>
-      <th>Duración (h)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let curso of cursos" (click)="showDetail(curso)">
-      <td>{{ curso.id }}</td>
-      <td>{{ curso.title }}</td>
-      <td>{{ curso.pltaform }}</td>
-      <td>{{ curso.launch_year }}</td>
-      <td>{{ curso.duration_hours }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container" style="margin: 20px;">
+  <div class="row">
+    <table class="table"> 
+      <thead style="background-color: rgb(230, 230, 230);">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Plataforma</th>
+          <th>Lanzamiento</th>
+          <th>Duración (h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursos" (click)="showDetail(curso)">
+          <td>{{ curso.id }}</td>
+          <td>{{ curso.title }}</td>
+          <td>{{ curso.pltaform }}</td>
+          <td>{{ curso.launch_year }}</td>
+          <td>{{ curso.duration_hours }}</td>
+        </tr>
+      </tbody>
+    </table>
 
-<div class="col-md-6" *ngIf="selectedCurso">
-  <app-cursos-detail [cursoDetail]="selectedCurso"></app-cursos-detail>
+    <div class="col-md-6" *ngIf="selectedCurso">
+      <app-cursos-detail [cursoDetail]="selectedCurso"></app-cursos-detail>
+    </div>
+</div>
 </div>
