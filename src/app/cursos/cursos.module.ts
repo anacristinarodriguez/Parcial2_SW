@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CursosListComponent } from './cursos-list/cursos-list.component';
+import { CursosDetailComponent } from './cursos-detail/cursos-detail.component';
 
 
 @NgModule({
@@ -10,7 +11,7 @@ import { CursosListComponent } from './cursos-list/cursos-list.component';
     CommonModule,
     HttpClientModule
   ],
-  declarations: [CursosListComponent],
-  exports: [CursosListComponent]
+  declarations: [CursosListComponent, CursosDetailComponent],
+  exports: [CursosListComponent, CursosDetailComponent]
 })
 export class CursosModule { }

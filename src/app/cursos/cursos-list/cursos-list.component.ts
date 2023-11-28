@@ -19,6 +19,10 @@ export class CursosListComponent implements OnInit {
     });
   }
 
+  showDetail(curso: any) {
+    this.selectedCurso = curso;
+  }
+
   ngOnInit() {
     this.getCursos();
   }
