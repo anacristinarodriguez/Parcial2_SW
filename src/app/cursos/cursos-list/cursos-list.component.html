@@ -23,7 +23,7 @@
         <tr *ngFor="let curso of cursos" (click)="showDetail(curso)">
           <td>{{ curso.id }}</td>
           <td>{{ curso.title }}</td>
-          <td>{{ curso.pltaform }}</td>
+          <td>{{ curso.platform }}</td>
           <td>{{ curso.launch_year }}</td>
           <td>{{ curso.duration_hours }}</td>
         </tr>
@@ -33,5 +33,7 @@
     <div class="col-md-6" *ngIf="selectedCurso">
       <app-cursos-detail [cursoDetail]="selectedCurso"></app-cursos-detail>
     </div>
+    
+    <p>Cursos con certificado:</p>
 </div>
 </div>
